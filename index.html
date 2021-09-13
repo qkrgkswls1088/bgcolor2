@@ -12,17 +12,30 @@
     .bgcolor--plum{
       background-color: plum;
     }
+    .bgcolor--gray{
+      background-color: lightgray;
+    }
   </style>
 </head>
 <body>
-  <button class="btn_bg">배경색상변경</button>
-  <script>
-    const btnBg = document.querySelector('.btn_bg');
-    // addEventListener('이벤트', 실행함수);
-    btnBg.addEventListener('click',function () {
-      document.body.classList.toggle('bgcolor--plum');
-      // console.log('버튼클릭');
-    });
-  </script>
+  <div class="btns">
+    <button class="btn_toggle">배경색상변경 토글버튼</button>
+    <button class="btn--reset">배경색상 리셋</button>
+    <button class="btn--bggray">배경색상변경 그레이</button>
+  </div>
+
+    <script>
+      const btnToggle = document.querySelector('.btn_toggle');
+      // addEventListener('이벤트', 실행함수);
+      btnToggle.addEventListener('click',function () {
+        document.body.classList.toggle('bgcolor--plum');
+        // console.log('버튼클릭');
+      });
+      const btnReset = document.querySelector('.btn--reset');
+      btnReset.addEventListener('',function(){
+        document.body.classList.remove('bgcolor--plum')
+      });
+
+      </script>
 </body>
 </html>
