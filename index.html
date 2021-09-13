@@ -33,8 +33,13 @@
       });
       const btnReset = document.querySelector('.btn--reset');
       btnReset.addEventListener('click',function(){
-        document.body.classList.remove('bgcolor--plum');
+        document.body.classList.remove('bgcolor--plum','bgcolor--gray');
       });
+
+      const btnBgGray = document.body.querySelector('.btn--bggray');
+      btnBgGray.addEventListener('click',function(){
+        document.body.classList.add('bgcolor--gray');
+      })
 
       </script>
 </body>
