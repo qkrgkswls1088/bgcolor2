@@ -8,12 +8,26 @@
   <style>
     body{
       background-color: lightcoral;
+      margin: 200px;
+      text-align: center;
+      transition: all 0.3s linear;
     }
     .bgcolor--plum{
       background-color: plum;
     }
     .bgcolor--gray{
       background-color: lightgray;
+    }
+    
+    .bg--image{
+      background-image: url(kaguya1.jpg);
+    }
+
+    button{
+      padding: 20px;
+      border-radius: 5px;
+      border: white;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -22,6 +36,7 @@
     <button class="btn_toggle">배경색상변경 토글버튼</button>
     <button class="btn--reset">배경색상 리셋</button>
     <button class="btn--bggray">배경색상변경 그레이</button>
+    <button class="btn--image">배경 이미지변경</button>
   </div>
 
     <script>
@@ -33,7 +48,7 @@
       });
       const btnReset = document.querySelector('.btn--reset');
       btnReset.addEventListener('click',function(){
-        document.body.classList.remove('bgcolor--plum','bgcolor--gray');
+        document.body.classList.remove('bgcolor--plum','bgcolor--gray', 'bg--image');
       });
 
       const btnBgGray = document.body.querySelector('.btn--bggray');
@@ -41,6 +56,10 @@
         document.body.classList.add('bgcolor--gray');
       })
 
+      const btnImage = document.body.querySelector('.btn--image');
+      btnImage.addEventListener('click',function(){
+        document.body.classList.add('bg--image');
+      })
       </script>
 </body>
 </html>
