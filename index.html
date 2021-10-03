@@ -11,7 +11,9 @@
       background-color: lightcoral;
       text-align: center;
       transition: all 0.3s linear;
+      height: 2000px;
     }
+
     .bgcolor--plum{
       background-color: plum;
     }
@@ -20,8 +22,21 @@
     }
 
     .btns{
+      margin-left: 500px;
+      margin-top: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      position: fixed;
+      background-color: transparent;
+      transition: 0.3s;
+    }
+
+    .btns.bgshow{
+      background-color: lightskyblue;
+    }
+
+    .container{
       position: relative;
-      padding: 200px;
     }
 
     .bg__img{
@@ -88,6 +103,16 @@
         // document.body.classList.add('bg--image');
         bgContainer.classList.add('bg__img--show');
       })
+
+      const navContainer = document.querySelector('.btns')
+      document.addEventListener('scroll', function () {
+        // console.Log(window.scrollY);
+        if(window.scrollY > 100) {
+          navContainer.classList.add('bgshow');
+        } else {
+          navContainer.classList.remove('bgshow');
+        }
+      });
       </script>
 </body>
 </html>
